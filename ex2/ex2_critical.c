@@ -8,6 +8,7 @@
 #define N 2048
 #define AMNT_GEN 2000
 #define THREADS 8
+int res; // global variable
 
 // headers
 int **CreateBoard(int m, int n);                    // create MxN board
@@ -17,7 +18,6 @@ int LiveCells(int **grid, int n);                   // amount of alive cells
 void ShowBoard(int **grid, int n, int amnt);        // show current board status
 int GetNeighbors( int **grid, int i, int j, int n); // amount alive neighbors
 void NewGen(int **grid, int **grid_next, int n);    // draw next board
-int res;
 
 // funcs
 // createboard
