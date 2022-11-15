@@ -11,10 +11,10 @@ public class TrafficController {
 
     int state = 0; // 0 - vazia, 1 - cheia
    
-    public void enterLeft();
-    public void enterRight();
-    public void leaveLeft();
-    public void leaveRight();
+    // public void enterLeft();
+    // public void enterRight();
+    // public void leaveLeft();
+    // public void leaveRight();
 
     public void enterLeft(){
         lock.lock();
@@ -32,7 +32,7 @@ public class TrafficController {
     public void enterRight(){
         lock.lock();
 
-        try {ie
+        try {
             if ((state != 0)) condition.await();
         } catch (InterruptedException ie) {
             System.err.println(ie.toString());
